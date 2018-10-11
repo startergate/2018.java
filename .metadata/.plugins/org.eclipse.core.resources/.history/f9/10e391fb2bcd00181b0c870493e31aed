@@ -1,0 +1,24 @@
+package study_2;
+
+abstract class Calculator {
+	public abstract int add(int a, int b);
+	public abstract int subtract(int a, int b);
+	public abstract double average(int a, int b);
+}
+
+public class CalcEx extends Calculator {
+	@Override
+	public int add(int a, int b) {
+		return a + b;
+	}
+	
+	@Override
+	public int subtract(int a, int b) {
+		return a - b;
+	}
+	
+	@Override
+	public double average(int a, int b) {
+		return (a + b) / 2.0;
+	}
+}

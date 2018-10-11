@@ -5,7 +5,7 @@ import java.awt.FlowLayout;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 
-@SuppressWarnings({ "unused" })
+@SuppressWarnings({ "unused", "serial" })
 public class MyFrame extends JFrame {
 	public MyFrame() {
 		setTitle("300x300 스윙 프레임 만들기");
