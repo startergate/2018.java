@@ -1,0 +1,24 @@
+package test;
+
+public class Test00_st {
+	public static void main(String[] args) {
+		int [] dab = { 1, 4, 2, 3, 1 };
+		int [] jdab = { 2, 4, 1, 3, 1 };
+		char[] ox = new char[5];
+		int cnt = 0;
+		for (int i = 0; i < dab.length; i++) {
+			if (dab[i] == jdab[i]) {
+				ox[i] = 'O';
+				cnt += 1;
+			}
+			else ox[i] = 'X';
+		}
+		System.out.println("----------");
+		for (int i = 0; i < dab.length; i++) {
+			System.out.println(" " + dab[i] + "  " + jdab[i] + "  " + ox[i]);
+		}
+		System.out.println("----------");
+		System.out.println("Á¡¼ö: " + (cnt) + "Á¡");
+		
+	}
+}
