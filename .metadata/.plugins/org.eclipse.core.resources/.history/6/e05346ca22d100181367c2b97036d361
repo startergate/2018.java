@@ -1,8 +1,0 @@
-package study_2;
-import java.util.ArrayList;
-
-public class ListExam {
-	public static void main(String[] args) {
-		ArrayList<String> set1 = new ArrayList<String>;
-	}
-}

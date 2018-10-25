@@ -1,0 +1,11 @@
+package _20181023;
+
+import java.util.HashSet;
+
+public class SetExam {
+	public static void main(String[] args) {
+		HashSet<String> set = new HashSet<String>();
+		
+		set.add("Choi");
+	}
+}

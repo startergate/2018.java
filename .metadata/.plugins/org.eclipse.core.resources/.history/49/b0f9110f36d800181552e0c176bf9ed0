@@ -1,0 +1,69 @@
+package _20181025;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class StudentDAO {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		ArrayList<StudentVO> list = new ArrayList<StudentVO>();
+		
+		System.out.println("-------------------------------------");
+		System.out.println("1.입력 | 2.전체리스트 | 3.검색 | 4.삭제 | 5.종료");
+		System.out.println("-------------------------------------");
+		
+		while (true) {
+			System.out.print("선택>");
+			int num = sc.nextInt();
+			int hakbun;
+			String name, major, addr, tel;
+			StudentVO vo = null;
+			switch (num) {
+			case 1:
+				System.out.print("학번>");
+				hakbun = sc.nextInt();
+				System.out.print("이름>");
+				name = sc.next();
+				System.out.print("전공>");
+				major = sc.next();
+				System.out.print("주소>");
+				addr = sc.next();
+				System.out.print("전화번호>");
+				tel = sc.next();
+				vo = new StudentVO(hakbun, name, major, addr, tel);
+				list.add(vo);
+				break;
+			case 2:
+				for (StudentVO v : list) {
+					System.out.println(v.getHakbun() + " " + v.getName() + " " + v.getMajor() + " " + v.getAddr() + " " + v.getTel());
+				}
+				break;
+			case 3:
+				Object info;
+				System.out.print("검색할 정보>");
+				info = sc.next();
+				for (StudentVO v : list) {
+					if (v.getAddr() == info || v.getClass() == info || Integer.toString(v.getHakbun()) == info || v.getMajor() == info || v.getName() == info || v.getTel() == info) {
+						System.out.println(v.getHakbun() + " " + v.getName() + " " + v.getMajor() + " " + v.getAddr() + " " + v.getTel());
+					}
+				}
+				break;
+			case 4:
+				System.out.print("삭제할 학번>");
+				hakbun = sc.nextInt();
+				for (int i = 0; i < list.size(); i++) {
+					if (list.get(i).getHakbun() == hakbun) {
+						list.remove(i);
+					}
+				}
+				break;
+			case 5:
+				System.exit(-1);
+				break;
+			default:
+				System.out.println("1~4번 메뉴를 입력하세요");
+				break;
+			}
+		}
+	}
+}

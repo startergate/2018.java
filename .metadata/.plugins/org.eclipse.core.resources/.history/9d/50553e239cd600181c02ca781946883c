@@ -1,0 +1,12 @@
+package _20181023;
+
+import java.util.HashMap;
+
+public class MapExam {
+
+	public static void main(String[] args) {
+		Map<String> map = new HashMap<String>();
+
+	}
+
+}
