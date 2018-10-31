@@ -1,0 +1,25 @@
+package _20181030;
+
+import java.io.BufferedOutputStream;
+import java.io.File;
+import java.io.FileOutputStream;
+
+public class ByteIOExam {
+	public static void main(String[] args) {
+		File file = new File("D:/CodingData/2018.java/JavaStudy/src/_20181030/HIEOS.jpg");
+		try {
+			if (!file.exists()) file.createNewFile();
+			
+			FileOutputStream out = new FileOutputStream(file);
+			out.write("Hello, Java!\n".getBytes());
+			
+			BufferedOutputStream out2 = new BufferedOutputStream(out, 512);
+			out2.write("Hello, Java2!\n".getBytes());
+			
+			PrintStream out = new PrintStream(out2);
+			out.println("Hello, Java3!\n".getBytes());
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+	}
+}
