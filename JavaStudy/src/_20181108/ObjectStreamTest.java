@@ -3,6 +3,9 @@ package _20181108;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
+import java.io.FileOutputStream;
+import java.io.BufferedOutputStream;
 
 class Student implements Serializable {
     private String name;
@@ -38,7 +41,7 @@ public class ObjectStreamTest {
             }
         }
     }
-    public void inputData() {
+    public static void inputData() {
         System.out.print("이름> ");
         String name = cin.next();
         System.out.print("나이> ");
@@ -58,8 +61,8 @@ public class ObjectStreamTest {
     }
     public static void saveData() {
         try {
-            ObjectOutputStream out = new ObjectOutputStream(new BufferedOutputStream(new FileOutputStream(datafile), 512));
-            out.writeObject();
+            ObjectOutputStream out = new ObjectOutputStream(new BufferedOutputStream(new FileOutputStream(dataFile), 512));
+            out.writeObject(512);
             out.close();
         } catch (IOException e) {
             e.printStackTrace();
@@ -79,6 +82,6 @@ public class ObjectStreamTest {
                 default: System.out.println("검색 오류");
             }
         }
-        cin.close();
+        //cin.close();
     }
 }
