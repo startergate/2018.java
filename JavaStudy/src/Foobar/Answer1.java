@@ -3,9 +3,9 @@ package Foobar;
 
 import java.util.Scanner;
 
-public class solution {
+public class Answer1 {
     public static void main(String[] args) {
-        Scanner sc = new Scanner();
+        Scanner sc = new Scanner(System.in);
         int cnt = 0;
         String input = sc.nextLine();
         sc.close();
